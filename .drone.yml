@@ -1,0 +1,8 @@
+pipeline:
+  publish:
+    image: plugins/docker
+    registry: no-cloud.fr
+    repo: no-cloud.fr/maestro/prosody
+    tag: latest
+    file: Dockerfile
+
