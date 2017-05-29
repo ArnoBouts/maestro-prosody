@@ -92,6 +92,7 @@ modules_enabled = {
                 --"motd"; -- Send a message to users when they log in
                 "legacyauth"; -- Legacy authentication. Only used by some old clients and bots.
                 "remote_roster";
+		"auth_ldap";
 };
 
 -- These modules are auto-loaded, but should you want
@@ -148,7 +149,11 @@ cross_domain_bosh = true;
 -- server please see http://prosody.im/doc/modules/mod_auth_internal_hashed
 -- for information about using the hashed backend.
 
-authentication = "internal_plain"
+authentication = "ldap"
+ldap_base = "ou=people,dc=home"
+ldap_server = "ldap"
+ldap_rootdn = "${LDAP_ADMIN_DN}"
+ldap_passwd = "${LDAP_ADMIN_PASSWORD}"
 
 -- Select the storage backend to use. By default Prosody uses flat files
 -- in its configured data directory, but it also supports more backends
