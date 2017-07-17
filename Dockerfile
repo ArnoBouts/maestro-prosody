@@ -8,7 +8,7 @@ RUN apt-get update \
 		ca-certificates \
 		lua-ldap \
 	&& hg clone https://hg.prosody.im/prosody-modules/ /usr/lib/prosody-modules \
-	&& apt-get autoremove -y mercurial \
+	&& apt-get remove -y mercurial \
 	&& rm -rf /var/lib/apt/lists/*
 
 ADD ./config/prosody.cfg.lua /etc/prosody
