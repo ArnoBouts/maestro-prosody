@@ -6,6 +6,7 @@ RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y \
 		mercurial \
 		ca-certificates \
+		lua-ldap \
 	&& hg clone https://hg.prosody.im/prosody-modules/ /usr/lib/prosody-modules \
 	&& apt-get autoremove -y mercurial \
 	&& rm -rf /var/lib/apt/lists/*
