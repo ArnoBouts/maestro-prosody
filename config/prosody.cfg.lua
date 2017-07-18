@@ -153,7 +153,8 @@ authentication = "ldap"
 ldap_base = "ou=people,dc=home"
 ldap_server = "ldap"
 ldap_rootdn = "${LDAP_ADMIN_DN}"
-ldap_passwd = "${LDAP_ADMIN_PASSWORD}"
+ldap_password = "${LDAP_ADMIN_PASSWORD}"
+ldap_filter = "(cn=$user)"
 
 -- Select the storage backend to use. By default Prosody uses flat files
 -- in its configured data directory, but it also supports more backends
@@ -176,7 +177,7 @@ sql = { driver = "MySQL", database = "prosody", username = "prosody", password =
 log = {
         info = "prosody.log"; -- Change 'info' to 'debug' for verbose logging        error = "prosody.err";
         -- "*syslog"; -- Uncomment this for logging to syslog
-        -- "*console"; -- Log to the console, useful for debugging with daemonize=false
+        "*console"; -- Log to the console, useful for debugging with daemonize=false
 }
 
 ----------- Virtual hosts -----------
