@@ -110,8 +110,8 @@ allow_registration = false;
 -- These are the SSL/TLS-related settings. If you don't want
 -- to use SSL/TLS, you may comment or remove this
 ssl = {
-        key = "certs/localhost.key";
-        certificate = "certs/localhost.crt";
+        key = "/acme/certs/xmpp.${DOMAIN}.pem";
+        certificate = "/acme/certs/xmpp.${DOMAIN}.pem";
 }
 
 -- Force clients to use encrypted connections? This option will
