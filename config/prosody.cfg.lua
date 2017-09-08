@@ -79,7 +79,7 @@ modules_enabled = {
         -- HTTP modules
                 "http";
                 --"bosh"; -- Enable BOSH clients, aka "Jabber over HTTP"
-                --"http_upload";
+                "http_upload";
                 --"http_files"; -- Serve static files from a directory over HTTP
                 "websocket";
 
@@ -218,7 +218,7 @@ Component "chat.${DOMAIN}" "muc"
 -- see: http://prosody.im/doc/components#adding_an_external_component
 --
 
-Component "xmpp.${DOMAIN}" "http_upload"
+--Component "xmpp.${DOMAIN}" "http_upload"
 
 Component "hangouts.${DOMAIN}"
         component_secret = "secret"
