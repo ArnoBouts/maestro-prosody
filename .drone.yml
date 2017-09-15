@@ -8,6 +8,6 @@ pipeline:
 
   notify:
     image: no-cloud.fr/drone-xmpp
-    secrets: [ xmpp_jid, xmpp_password, xmpp_to ]
+    secrets: [ xmpp_host, xmpp_jid, xmpp_password, xmpp_to ]
     when:
       status: [ success, failure ]
