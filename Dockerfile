@@ -1,4 +1,5 @@
 FROM prosody/prosody
+# FROM_DIGEST sha256:1
 
 USER root
 
