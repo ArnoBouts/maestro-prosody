@@ -1,5 +1,5 @@
 FROM prosody/prosody
-# FROM_DIGEST sha256:7175ff3c3b01aa18637cec84910902f418f4d2d36dcd85489cb044d76ddbcafb
+# FROM_DIGEST sha256:15ab4c34bdd7ddc80c5e2b9879d1ab7cb2f1e70695c1e590ef7556ca3b42ba89
 
 USER root
 
