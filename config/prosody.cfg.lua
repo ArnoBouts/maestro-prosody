@@ -169,8 +169,8 @@ storage = {
 
 -- For the "sql" backend, you can uncomment *one* of the below to configure:
 --sql = { driver = "SQLite3", database = "prosody.sqlite" } -- Default. 'database' is the filename.
-sql = { driver = "MySQL", database = "prosody", username = "prosody", password = "prosody", host = "prosody-db" }
---sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "prosody", host = "storage", port = 5432 }
+--sql = { driver = "MySQL", database = "prosody", username = "prosody", password = "prosody", host = "prosody-db" }
+sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "prosody", host = "prosody-db", port = 5432 }
 
 -- Logging configuration
 -- For advanced logging see http://prosody.im/doc/logging
@@ -221,6 +221,9 @@ Component "chat.${DOMAIN}" "muc"
 --Component "xmpp.${DOMAIN}" "http_upload"
 
 Component "hangouts.${DOMAIN}"
+        component_secret = "secret"
+
+Component "facebook.${DOMAIN}"
         component_secret = "secret"
 
 Component "telegram.${DOMAIN}"
