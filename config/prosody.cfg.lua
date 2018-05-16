@@ -14,7 +14,7 @@ pidfile = "prosody.pid"
 
 
 component_ports = { 5347 }
-component_interface = "prosody.components"
+component_interfaces = { "prosody" }
 
 ------ Module http -----
 
