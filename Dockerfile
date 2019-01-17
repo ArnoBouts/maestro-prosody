@@ -3,11 +3,13 @@ FROM prosody/prosody
 
 USER root
 
+COPY stretch-backports.list /etc/apt/sources.list.d/
+
 RUN apt-get update \
-	&& DEBIAN_FRONTEND=noninteractive apt-get install -y \
+	&& DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 		mercurial \
 		ca-certificates \
-		lua-ldap \
+        && apt-get -t stretch-backports install -y --no-install-recommends lua-ldap \
 	&& hg clone https://hg.prosody.im/prosody-modules/ /usr/lib/prosody-modules \
 	&& apt-get remove -y mercurial \
 	&& rm -rf /var/lib/apt/lists/*
