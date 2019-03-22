@@ -82,6 +82,7 @@ modules_enabled = {
                 "http_upload";
                 --"http_files"; -- Serve static files from a directory over HTTP
                 "websocket";
+		"conversejs";
 
         -- Other specific functionality
                 "posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
